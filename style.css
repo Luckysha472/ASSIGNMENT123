@@ -1,0 +1,78 @@
+p{
+    color:red;
+}
+button{
+    color: blue;
+    cursor: pointer;
+}
+/* task 3 */
+.TS{
+    text-align: center;
+}
+.rec1{
+    border: solid 1px;
+    height: 200px;
+    width: 100px;
+    border-bottom: none;
+    position: relative;
+    left: 500px;
+    top: 100px;
+}
+.rec2{
+    border: solid 1px;
+    height: 200px;
+    width: 100px;
+    border-top: none;
+    position: relative;
+    top: 200px;
+    left: 500px;
+}
+.rec3{
+    border: solid 1px;
+    height: 100px;
+    width: 270px;
+    position: relative;
+    left: 600px;
+   bottom: 100px;
+   border-left: none;
+}
+.rec4{
+        border: solid 1px;
+        height: 100px;
+        width: 270px;
+        position: relative;
+       border-right: none;
+       bottom: 200px;
+       left: 230px;
+}
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+  }
+.north{
+position: relative;
+bottom: 580px;
+left: 510px;
+}
+.south{
+  position: relative;
+  left: 450px;
+}
+.west{
+    position: relative;
+    bottom: 300px;
+    right: 10px;
+}
+.east{
+    position: relative;
+    bottom: 290px;
+   left: 670px;
+}
