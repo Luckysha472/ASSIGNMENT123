@@ -129,28 +129,109 @@ document.querySelector(".gradeSystem").addEventListener("click",()=>{
 
 })
 // task ---3
+function reset(){
+    document.querySelector(".El").style.backgroundColor="green"
+    document.querySelector(".Er").style.backgroundColor="green"
+    document.querySelector(".Sr").style.backgroundColor="green"
+    document.querySelector(".Sl").style.backgroundColor="green"
+    document.querySelector(".wr").style.backgroundColor="green"
+    document.querySelector(".wl").style.backgroundColor="green"
+    document.querySelector(".Nr").style.backgroundColor="green"
+    document.querySelector(".Nl").style.backgroundColor="green"
+    
+}
 document.querySelector(".north").addEventListener("click",()=>{
-    document.querySelector(".rec1").style.backgroundColor="green"
-    document.querySelector(".rec2").style.backgroundColor="red"
-    document.querySelector(".rec3").style.backgroundColor="red"
-    document.querySelector(".rec4").style.backgroundColor="red"
-  })
-  document.querySelector(".south").addEventListener("click",()=>{
-    document.querySelector(".rec1").style.backgroundColor="red"
-    document.querySelector(".rec2").style.backgroundColor="green"
-    document.querySelector(".rec3").style.backgroundColor="red"
-    document.querySelector(".rec4").style.backgroundColor="red"
-  })
-  document.querySelector(".west").addEventListener("click",()=>{
-    document.querySelector(".rec1").style.backgroundColor="red"
-    document.querySelector(".rec2").style.backgroundColor="red"
-    document.querySelector(".rec3").style.backgroundColor="red"
-    document.querySelector(".rec4").style.backgroundColor="green"
-  })
-  document.querySelector(".east").addEventListener("click",()=>{
-    document.querySelector(".rec1").style.backgroundColor="red"
-    document.querySelector(".rec2").style.backgroundColor="red"
-    document.querySelector(".rec3").style.backgroundColor="green"
-    document.querySelector(".rec4").style.backgroundColor="red"
-  })
-  
+    reset()
+    document.querySelector(".El").style.backgroundColor="red"
+    document.querySelector(".Sr").style.backgroundColor="red"
+    document.querySelector(".wr").style.backgroundColor="red"
+    
+})
+document.querySelector(".east").addEventListener("click",()=>{
+    reset()
+    document.querySelector(".Sr").style.backgroundColor="red"
+    document.querySelector(".wr").style.backgroundColor="red"
+    document.querySelector(".Nl").style.backgroundColor="red"
+    
+})
+document.querySelector(".south").addEventListener("click",()=>{
+    reset()
+    document.querySelector(".wr").style.backgroundColor="red"
+    document.querySelector(".Nl").style.backgroundColor="red"
+    document.querySelector(".El").style.backgroundColor="red"
+    
+})
+document.querySelector(".west").addEventListener("click",()=>{
+    reset()
+    document.querySelector(".Nl").style.backgroundColor="red"
+    document.querySelector(".El").style.backgroundColor="red"
+    document.querySelector(".Sr").style.backgroundColor="red"
+    
+})
+// task 4 js
+document.querySelector(".bookNow").addEventListener("click",()=>{
+    var carNumber=document.querySelector(".number").value
+    var slot=document.querySelector(".options").value
+    if(carNumber==""){
+        alert("pls Enter the car Number")
+    }
+    else if(slot=="Slot-1" && document.querySelector(".square1").style.backgroundColor!="red"){
+        document.querySelector(".square1").style.backgroundColor="red"
+        document.querySelector(".Number1").innerHTML=carNumber
+        alert(carNumber);
+        // document.querySelector(".number").value=""
+    }
+    else if(slot=="Slot-2" && document.querySelector(".square2").style.backgroundColor!="red"){
+        document.querySelector(".square2").style.backgroundColor="red"
+        document.querySelector(".Number2").innerHTML=carNumber
+        document.querySelector(".number").value=""  
+    }
+    else if(slot=="Slot-3" && document.querySelector(".square3").style.backgroundColor!="red"){
+        document.querySelector(".square3").style.backgroundColor="red"
+        document.querySelector(".Number3").innerHTML=carNumber
+        document.querySelector(".number").value=""  
+    }
+    else if(slot=="Slot-4" && document.querySelector(".square4").style.backgroundColor!="red"){
+        document.querySelector(".square4").style.backgroundColor="red"
+        document.querySelector(".Number4").innerHTML=carNumber
+        document.querySelector(".number").value=""  
+    }
+    else if(slot=="Slot-5" && document.querySelector(".square1").style.backgroundColor!="red"){
+        document.querySelector(".square5").style.backgroundColor="red"
+        document.querySelector(".Number5").innerHTML=carNumber
+        document.querySelector(".number").value=""  
+    }
+})
+
+document.querySelector(".releaseNow").addEventListener("click",()=>{
+    var carNumber=document.querySelector(".number").value
+    var slot=document.querySelector(".options").value
+    if(carNumber==""){
+        alert("pls Enter the car Number")
+    }
+    else if(slot=="Slot-1"){
+        document.querySelector(".square1").style.backgroundColor="green"
+        document.querySelector(".Number1").innerHTML=""
+        document.querySelector(".number").value="" 
+    }
+    else if(slot=="Slot-2"){
+        document.querySelector(".square2").style.backgroundColor="green"
+        document.querySelector(".Number2").innerHTML=""
+        document.querySelector(".number").value=""   
+    }
+    else if(slot=="Slot-3"){
+        document.querySelector(".square3").style.backgroundColor="green"
+        document.querySelector(".Number3").innerHTML=""
+        document.querySelector(".number").value=""   
+    }
+    else if(slot=="Slot-4"){
+        document.querySelector(".square4").style.backgroundColor="green"
+        document.querySelector(".Number4").innerHTML="" 
+        document.querySelector(".number").value=""  
+    } 
+    else if(slot=="Slot-5"){
+        document.querySelector(".square5").style.backgroundColor="green"
+        document.querySelector(".Number5").innerHTML=""
+        document.querySelector(".number").value=""   
+    }   
+})
