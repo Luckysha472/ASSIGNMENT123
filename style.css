@@ -132,3 +132,10 @@ button{
     position: relative;
    bottom: 600px;
   }
+/* task 5css---- */
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

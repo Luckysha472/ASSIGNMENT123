@@ -48,7 +48,7 @@ document.querySelector(".form1").addEventListener("click",()=>{
 })
 
 
-// task----2
+// task----2----------------------------------------------------------
 //1) Enter the bill amount
 document.querySelector(".bill2").addEventListener("click",()=>{
     var d=Number(document.querySelector(".bill").value)
@@ -128,7 +128,7 @@ document.querySelector(".gradeSystem").addEventListener("click",()=>{
     document.querySelector(".system").innerHTML=b
 
 })
-// task ---3
+// task ---3----------------------------------------------------------------
 function reset(){
     document.querySelector(".El").style.backgroundColor="green"
     document.querySelector(".Er").style.backgroundColor="green"
@@ -168,7 +168,7 @@ document.querySelector(".west").addEventListener("click",()=>{
     document.querySelector(".Sr").style.backgroundColor="red"
     
 })
-// task 4 js
+// task 4 js------------------------------------------------------
 document.querySelector(".bookNow").addEventListener("click",()=>{
     var carNumber=document.querySelector(".number").value
     var slot=document.querySelector(".options").value
@@ -229,9 +229,51 @@ document.querySelector(".releaseNow").addEventListener("click",()=>{
         document.querySelector(".Number4").innerHTML="" 
         document.querySelector(".number").value=""  
     } 
-    else if(slot=="Slot-5"){
+    else if(slot=="Slot-5"){ 
         document.querySelector(".square5").style.backgroundColor="green"
         document.querySelector(".Number5").innerHTML=""
         document.querySelector(".number").value=""   
     }   
+})
+// task 5 js-------------------------------------
+// q--->1
+document.querySelector(".swap").addEventListener("click",()=>{
+    var num1=document.querySelector(".snumber").value
+    var ans=0
+    while(num1!==0){
+        ans=ans*10+num1%10
+        num1=Math.floor(num1/10);        
+    }
+    document.querySelector(".swaped").innerHTML=ans
+})
+// q--->2
+document.querySelector(".singleDigit").addEventListener("click",()=>{
+    var num1=Number(document.querySelector(".anumber").value)
+    var num2=Number(document.querySelector(".anumber1").value)
+    var num3=Number(document.querySelector(".anumber2").value)
+    var d=num1+num2+num3
+    var final=d.toString()
+    while(final.length!=1){
+        let count=0
+       for(let ctr of final){
+        count+=Number(ctr)
+       }
+       final=count.toString()
+    }
+    document.querySelector(".finalAnswer").innerHTML=final
+})
+// q3
+document.querySelector(".CB").addEventListener("click",()=>{
+    var message="Your balance is RS.3999"
+    document.querySelector(".msg").innerHTML=message
+})
+document.querySelector(".Recharge").addEventListener("click",()=>{
+    document.querySelector(".msg").classList.remove("show");
+    document.querySelector(".msg").classList.add("hide");
+    document.querySelector(".Recharged").classList.remove("hide");
+    document.querySelector(".Recharged").classList.remove("show");
+})  
+document.querySelector(".pls").addEventListener("click",()=>{
+    var t=document.querySelector(".getRecharge").value
+    document.querySelector(".finalMsg").innerHTML=`recharged sucess ${t}`
 })
