@@ -178,8 +178,8 @@ document.querySelector(".bookNow").addEventListener("click",()=>{
     else if(slot=="Slot-1" && document.querySelector(".square1").style.backgroundColor!="red"){
         document.querySelector(".square1").style.backgroundColor="red"
         document.querySelector(".Number1").innerHTML=carNumber
-        alert(carNumber);
-        // document.querySelector(".number").value=""
+        // alert(carNumber);
+        document.querySelector(".number").value=""
     }
     else if(slot=="Slot-2" && document.querySelector(".square2").style.backgroundColor!="red"){
         document.querySelector(".square2").style.backgroundColor="red"
