@@ -161,3 +161,24 @@ document.querySelector(".EnterValueCheck").addEventListener("click",()=>{
   }
   }
 })
+// Task-------8
+document.querySelector(".desCheck").addEventListener("click",()=>{
+  var descendingValue1=document.querySelector(".desValues1").value
+  var descendingValue2=document.querySelector(".desValues2").value
+  var maximum=max(descendingValue1,descendingValue2)
+  var mininum=min(descendingValue1,descendingValue2)
+  for(var num=maximum;num>mininum;num--){
+    if(num%2!=0){
+      document.querySelector(".desAnswer").innerHTML+=num
+    }
+  }
+})
+// q---2
+document.querySelector(".midCheck").addEventListener("click",()=>{
+  var middleValue=document.querySelector(".midValue1").value
+  var string=middleValue.tostring()
+  var length=(string.length)/2
+  for(var num=length;num<string.length;num++){
+    document.querySelector(".desAnswer").innerHTML+=string[num]
+  }
+})
