@@ -181,3 +181,88 @@ for(let num=random;num<=middleValue;num++){
   document.querySelector(".midAnswer").innerHTML+=` ${num}`
 }
 })
+// task---9
+// q---1
+document.querySelector(".pattern1").addEventListener("click",()=>{
+  let a=5
+let b=`1 2 3 4 5`
+for(let num=0;num<a;num++){
+    document.querySelector(".answer").innerHTML+=`<p>${b}</p>`
+}
+})
+// q---2
+document.querySelector(".pattern2").addEventListener("click",()=>{
+ let a=5
+let b=a
+for(let num=1;num<a+1;num++){
+    let r=""
+    for(let star=1;star<num+1;star++){
+        r+="* ";
+    }
+    document.querySelector(".answer").innerHTML+=`<p>${r}</p>`
+}
+})
+// q-----3
+document.querySelector(".pattern3").addEventListener("click",()=>{
+let a=5
+let b=a
+for(let num=1;num<a+1;num++){
+    let r=""
+    for(let star=b+1;star>1;star--){
+        r+="* ";
+    }
+    document.querySelector(".answer").innerHTML+=`<p>${r}</p>`
+  b-=1
+}
+ })
+ document.querySelector(".pattern4").addEventListener("click",()=>{
+  let c = 4
+  let d = 1
+  for (let i = 0; i<=4; i++){
+  let container = ("&nbsp;".repeat(c * 3) + "* ".repeat(d))
+  document.querySelector(".answer").innerHTML += `<p>${container}</p>`
+  c-=1
+  d+=1
+  }})
+
+// task 9js
+// q1
+function arrPush(arr,element){
+    let f=arr.length
+    arr[f]=element
+    document.querySelector(".answer1").innerHTML=arr
+}
+// q2
+function arrPop(arr){
+    let pop=arr[arr.length-1]
+    arr.length=arr.length-1
+    document.querySelector(".answer2").innerHTML+=`${pop}<br>`
+    document.querySelector(".answer2").innerHTML+=arr
+}
+// q3
+function shift(arr){
+    let answer=[]
+    for(var num=1;num<=arr.length-1;num++)
+    {
+        answer.push(arr[num])
+    }
+    document.querySelector(".answer3").innerHTML=answer
+}
+// q4
+function unShift(arr,element){
+    let r=[element]
+    document.querySelector(".answer4").innerHTML=`${r},${arr}`
+    }
+
+// q---5
+let answer=false
+function include(arr,element){
+    for(let num=0;num<arr.length;num++){
+        if(arr[num]==element){
+            answer=true
+            break
+        }
+        document.querySelector(".answer5").innerHTML=answer
+}}
+                
+
